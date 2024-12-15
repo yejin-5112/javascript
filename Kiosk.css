@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 200px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+header{
+    font-size: 40px;
+    font-weight: 700;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    background-color: white;
+}
+
+.menu-title{
+    position: relative;
+    width: 70%;
+    border-right: 1px solid darkgray;
+}
+
+.m-settings-btn{
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    width: 140px;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 10px;
+    border: 1px solid darkgray;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.m-settings-btn:hover {
+    background-color: #e1e1e1;
+}
+
+.cart-title{
+    width: 30%;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 240px;
+    grid-gap: 30px;
+    width: 70%;
+    padding: 80px 30px 30px 30px;
+    border-right: 1px solid darkgray;
+    overflow-y: auto;
+}
+
+.cart{
+    width: 30%;
+    padding: 80px 30px 30px 30px;
+    position: relative;
+
+}
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    cursor: grab;
+    width: 100%;
+    height: 240px;
+    background-color: white;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid rgb(178, 178, 178);
+    padding: 10px 15px 15px 15px;
+    box-shadow: 3px 3px 6px rgba(82, 82, 82, 0.3);
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 18px;
+}
+.cart-item-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.pay-wrap {
+    position: absolute;
+    border-top: 1px solid #000;
+    padding-top: 20px;
+    width: 90%;
+    bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total {
+    font-weight: bold;
+    text-align: right;
+    width: 90%;
+    font-size: 22px;
+}
+
+.pay{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid darkgray;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pay:hover {
+    background-color: #e1e1e1;
+}
+
+.increase, .decrease{
+    width: 20px;
+    cursor: pointer;
+}
+
+.receipt {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    overflow-y: auto;
+    z-index: 11;
+}
+
+.receipt-header {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.receipt-body {
+    font-size: 17px;
+    margin-bottom: 20px;
+    line-height: 25px;
+}
+
+.receipt-total {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: auto;
+    text-align: right;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.receipt-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(75, 75, 75);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    display: none;
+}
+
+.m-settings{
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    position: absolute;
+    top: 0px;
+}
+
+.admin-panel {
+    position: fixed;
+    top: 50%;
+    right: 0px;
+    transform: translatey(-50%);
+    width: 30%;
+    height: 100vh;
+    padding: 80px 20px 20px 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    display: none;
+    z-index: 12;
+}
+
+.del-text{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#admin-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#admin-form button {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#admin-form button:hover {
+    background-color: #0056b3;
+}
+
