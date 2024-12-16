@@ -45,7 +45,7 @@ header{
     right: 20px;
     font-size: 20px;
     font-weight: 600;
-    width: 140px;
+    width: 150px;
     height: 44px;
     line-height: 44px;
     border-radius: 10px;
@@ -60,6 +60,27 @@ header{
 
 .cart-title{
     width: 30%;
+    position: relative;
+}
+
+.payment-history-btn{
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    width: 100px;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 10px;
+    border: 1px solid darkgray;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.payment-history-btn:hover {
+    background-color: #e1e1e1;
 }
 
 .menu {
@@ -130,12 +151,12 @@ header{
 
 .pay{
     width: 100px;
-    height: 50px;
+    height: 45px;
     border-radius: 10px;
     background-color: #f9f9f9;
     border: 1px solid darkgray;
     text-align: center;
-    line-height: 50px;
+    line-height: 45px;
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
@@ -212,6 +233,98 @@ header{
     display: none;
 }
 
+.payment-history {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    max-height: 800px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    overflow-y: auto;
+    z-index: 20;
+}
+
+.payment-history-header {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    padding: 20px 20px 20px 20px;
+    background-color: #fff;
+}
+
+.payment-history-reset{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    width: 60px;
+    height: 25px;
+    border: 1px solid darkgray;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.payment-history-reset:hover {
+    background-color: #e1e1e1;
+}
+
+.payment-history-body {
+    font-size: 17px;
+    line-height: 25px;
+    margin-bottom: 20px;
+    padding: 0px 20px 0px 20px;
+}
+
+.payment-history-body hr {
+    margin: 3px 0px 10px 0px;
+}
+
+.close-wrap{
+    width: 350px;
+    height: 90px;
+    background-color: #fff;
+    position: sticky;
+    bottom: 0px;
+    left: 0px;
+    padding: 20px;
+}
+
+.payment-history-close {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.payment-history-close:hover {
+    background-color: #0056b3;
+}
+
+.payment-history-total{
+    font-weight: 600;
+    color: rgb(57, 154, 89);
+}
+
 .m-settings{
     font-size: 40px;
     font-weight: 700;
@@ -269,4 +382,3 @@ header{
 #admin-form button:hover {
     background-color: #0056b3;
 }
-
