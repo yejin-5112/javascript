@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    localStorage.clear();
+    
     let defaultMenuData = [
         { name: "짜장면", price: 7000, imageSrc: "img/jajangmyeon.png" },
         { name: "고기짬뽕", price: 8000, imageSrc: "img/meat_jjamppong.png" },
