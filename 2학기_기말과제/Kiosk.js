@@ -1,15 +1,15 @@
 $(document).ready(function () {
     let defaultMenuData = [
-        { name: "짜장면", price: 7000, imageSrc: "img/짜장면.png" },
-        { name: "고기짬뽕", price: 8000, imageSrc: "img/고기짬뽕.png" },
-        { name: "해물짬뽕", price: 8000, imageSrc: "img/해물짬뽕.png" },
-        { name: "탕수육", price: 10000, imageSrc: "img/탕수육.png" },
-        { name: "칠리새우", price: 12000, imageSrc: "img/칠리새우.png" },
-        { name: "멘보샤", price: 5000, imageSrc: "img/멘보샤.png" },
-        { name: "고기만두", price: 4000, imageSrc: "img/고기만두.png" },
-        { name: "김치만두", price: 4000, imageSrc: "img/김치만두.png" },
-        { name: "후라이드치킨", price: 8500, imageSrc: "img/후라이드치킨.png" },
-        { name: "양념치킨", price: 9000, imageSrc: "img/양념치킨.png" }
+        { name: "짜장면", price: 7000, imageSrc: "img/jajangmyeon.png" },
+        { name: "고기짬뽕", price: 8000, imageSrc: "img/meat_jjamppong.png" },
+        { name: "해물짬뽕", price: 8000, imageSrc: "img/seafood_jjamppong.png" },
+        { name: "탕수육", price: 10000, imageSrc: "img/tangsuyuk.png" },
+        { name: "칠리새우", price: 12000, imageSrc: "img/chili_shrimp.png" },
+        { name: "멘보샤", price: 5000, imageSrc: "img/menbosha.png" },
+        { name: "고기만두", price: 4000, imageSrc: "img/meat_mandu.png" },
+        { name: "김치만두", price: 4000, imageSrc: "img/kimchi_mandu.png" },
+        { name: "후라이드치킨", price: 8500, imageSrc: "img/fried_chicken.png" },
+        { name: "양념치킨", price: 9000, imageSrc: "img/yangnyeom_chicken.png" }
     ];
 
     let paymentHistory = JSON.parse(localStorage.getItem("paymentHistory")) || [];
